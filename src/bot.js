@@ -7,8 +7,8 @@ var strings = require('./helpers/strings')
 var Twitter = new twit(config)
 
 // Frequency in minutes
-var retweetFrequency = 5
-var favoriteFrequency = 5
+var retweetFrequency = 1
+var favoriteFrequency = 1
 
 // RANDOM QUERY STRING  =========================
 
@@ -44,6 +44,7 @@ var retweet = function() {
         if (!err) {
             // grab ID of tweet to retweet
             try {
+                console.log(params.q);
                 // try get tweet id, derp if not
                 var retweetId = data.statuses[0].id_str
             }
@@ -72,9 +73,9 @@ var retweet = function() {
 }
 
 // retweet on bot start
-retweet()
+ retweet()
     // retweet in every x minutes
-setInterval(retweet, 60000 * retweetFrequency)
+ setInterval(retweet, 60000 * retweetFrequency)
 
 // FAVORITE BOT====================
 
@@ -116,9 +117,9 @@ var favoriteTweet = function() {
 }
 
 // favorite on bot start
-favoriteTweet()
+//favoriteTweet()
     // favorite in every x minutes
-setInterval(favoriteTweet, 60000 * favoriteFrequency)
+//setInterval(favoriteTweet, 60000 * favoriteFrequency)
 
 // STREAM API for interacting with a USER =======
 // set up a user stream
@@ -154,7 +155,7 @@ function tweetNow(tweetTxt) {
     };
 
     // HARCODE user name in and check before RT
-    var n = tweetTxt.search(/@UserNameHere/i)
+    var n = tweetTxt.search(/@RealRotfuks/i)
 
     if (n != -1) {
         console.log('TWEET SELF! Skipped!!')
@@ -170,6 +171,8 @@ function tweetNow(tweetTxt) {
         })
     }
 }
+
+tweetNow("Hello World ;)");
 
 // function to generate a random tweet tweet
 function ranDom(arr) {

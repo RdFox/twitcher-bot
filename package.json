@@ -1,15 +1,27 @@
 {
-  "name": "twitter-bot",
+  "name": "twitcher-bot",
   "version": "1.0.0",
   "description": "twitter bot bootstrap",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
-  "author": "",
+  "author": "Rotfuks",
   "license": "MIT",
   "dependencies": {
     "twit": "^2.2.5",
     "unique-random-array": "^1.0.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RdFox/twitcher-bot.git"
+  },
+  "keywords": [
+    "esportsgermanyev"
+  ],
+  "bugs": {
+    "url": "https://github.com/RdFox/twitcher-bot/issues"
+  },
+  "homepage": "https://github.com/RdFox/twitcher-bot#readme"
 }

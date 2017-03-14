@@ -1,13 +1,14 @@
 module.exports = {
     queryString: [
-        ''
+        '#redfox #photography'
     ],
     queryStringSubQuery: [
         ''
     ],
     blockedStrings: [
         'porn',
-        'sex'
+        'sex',
+        'Football'
     ],
     resultType: [
         'mixed',
